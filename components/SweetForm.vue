@@ -12,7 +12,7 @@ form {
 
   border: black solid;
   border-radius: 0.05rem;
-  padding: var(--form-gap);
+  padding: var(--form-gap) 0;
 }
 
 input {
@@ -38,40 +38,55 @@ fieldset {
 }
 
 .block {
-  background:
-    radial-gradient(circle at center, #000 25%, transparent 1%);
-  background-size: 2rem 2rem;
-  background-position: 0 center;
+  background: radial-gradient(circle at center, #000 50%, transparent 1%), white;
+  background-size: 1rem 1rem;
+  background-position: center;
+  background-repeat: repeat-x;
 }
 
 #confirm-btn {
   background: salmon;
   border: solid;
 }
+
+.row {
+  display: grid;
+  padding: 0 var(--form-gap);
+}
 </style>
 
 <template>
-  <form class="block">
+  <form>
     <fieldset>
       <!-- <legend>sign up</legend> -->
-      <section class="legend">
-        <h4>sign up</h4>
-      </section>
+      <div class="row block">
+        <section class="legend">
+          <h4>sign up</h4>
+        </section>
+      </div>
 
-      <section class="input-wrapper">
-        <!-- <label for="username">username</label> -->
-        <input id="username" placeholder="username" type="text" required />
-      </section>
-      <section class="input-wrapper">
-        <!-- <label for="email">email</label> -->
-        <input id="email" placeholder="email" type="email" required />
-      </section>
-      <section class="input-wrapper">
-        <!-- <label for="password">password</label> -->
-        <input id="password" placeholder="password" type="password" required />
-      </section>
+      <div class="row block">
+        <section class="input-wrapper">
+          <!-- <label for="username">username</label> -->
+          <input id="username" placeholder="username" type="text" required />
+        </section>
+      </div>
+      <div class="row block">
+        <section class="input-wrapper">
+          <!-- <label for="email">email</label> -->
+          <input id="email" placeholder="email" type="email" required />
+        </section>
+      </div>
+      <div class="row block">
+        <section class="input-wrapper">
+          <!-- <label for="password">password</label> -->
+          <input id="password" placeholder="password" type="password" required />
+        </section>
+      </div>
 
-      <button id="confirm-btn">confirm</button>
+      <div class="row block">
+        <button id="confirm-btn">confirm</button>
+      </div>
     </fieldset>
   </form>
 </template>
