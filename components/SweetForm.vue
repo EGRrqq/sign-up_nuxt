@@ -21,7 +21,7 @@ fieldset {
 .input-wrapper {
   display: grid;
 
-  border: var(--form-border) solid transparent;
+  border: var(--form-border) solid;
   border-top: 0;
   border-bottom: 0;
 
@@ -65,9 +65,24 @@ fieldset {
         <div class="row block block-bg_separator"></div>
         <div class="row block block-bg_separator">
           <section class="input-wrapper">
+            <input id="username" placeholder="username" type="text" required />
+          </section>
+        </div>
+        <div class="row block block-bg_separator"></div>
+
+        <div class="row block block-bg_separator">
+          <section class="input-wrapper">
+            <input id="email" placeholder="email" type="email" required />
+          </section>
+        </div>
+        <div class="row block block-bg_separator"></div>
+
+        <div class="row block block-bg_separator">
+          <section class="input-wrapper">
             <input id="password" placeholder="password" type="password" required />
           </section>
         </div>
+
         <div class="row block block-bg_separator"></div>
       </div>
     </fieldset>
