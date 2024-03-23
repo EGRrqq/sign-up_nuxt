@@ -58,6 +58,20 @@ fieldset {
   padding: 0 var(--form-gap);
   outline: var(--form-border) solid;
 }
+
+#submit-btn {
+  flex-grow: 1;
+
+  background-color: white;
+  border: calc(var(--form-border) * 2) solid;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+#submit-btn:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
 </style>
 
 <template>
@@ -85,6 +99,11 @@ fieldset {
           </section>
         </div>
 
+        <div class="row block block-bg_separator"></div>
+
+        <div class="row block block-bg_separator">
+          <button id="submit-btn">submit</button>
+        </div>
         <div class="row block block-bg_separator"></div>
       </div>
     </fieldset>
