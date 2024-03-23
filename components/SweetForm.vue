@@ -14,6 +14,7 @@ form {
 
 input {
   min-height: calc(var(--form-gap) * 2);
+  padding: 0 0.25rem;
 }
 
 fieldset {
@@ -63,7 +64,7 @@ fieldset {
   flex-grow: 1;
 
   background-color: white;
-  border: calc(var(--form-border) * 2) solid;
+  border: var(--form-border) solid;
   border-top: 0;
   border-bottom: 0;
 }
@@ -72,11 +73,27 @@ fieldset {
   background-color: lightgray;
   cursor: pointer;
 }
+
+.header {
+  flex-grow: 1;
+  background-color: white;
+  text-align: center;
+
+  border: var(--form-border) solid;
+}
 </style>
 
 <template>
   <form>
     <fieldset>
+      <div class="row block block-bg_separator"></div>
+      <div class="row block block-bg_separator">
+        <section class="header">
+          <h2>Sign Up</h2>
+          <p>Have an account?</p>
+        </section>
+      </div>
+
       <div>
         <div class="row block block-bg_separator"></div>
         <div class="row block block-bg_separator">
