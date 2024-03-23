@@ -9,9 +9,9 @@
   --green-400: #a7df34;
 
   --red-400: #ff6958;
-  --pink-200: #ffe5e9;
 
   --yellow-100: #fffcf7;
+  --white-100: #fff7f8;
 
   --form-gap: 1rem;
   --form-border: 0.05rem;
@@ -95,7 +95,7 @@ fieldset {
 
 .plate {
   padding: calc(var(--form-gap) * 2);
-  background-color: var(--pink-200);
+  background-color: var(--white-100);
   background-image:
     radial-gradient(circle at center,
       transparent 39%,
