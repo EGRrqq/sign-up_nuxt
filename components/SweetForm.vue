@@ -7,7 +7,9 @@
 }
 
 form {
+  display: grid;
   background-color: white;
+  box-shadow: 0.05rem 0.05rem 0 0.05rem, 0.1rem 0.1rem 0 0.05rem;
 }
 
 input {
