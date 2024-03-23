@@ -9,15 +9,23 @@
   --green-400: #a7df34;
 
   --red-400: #ff6958;
+  --pink-200: #ffe5e9;
+
+  --yellow-100: #fffcf7;
 
   --form-gap: 1rem;
   --form-border: 0.05rem;
+
+  --plate: black;
+}
+
+body {
+  background: var(--yellow-100);
 }
 
 form {
   display: grid;
   background-color: var(--blue-800);
-  box-shadow: 0.05rem 0.05rem 0 0.05rem, 0.1rem 0.1rem 0 0.05rem;
 }
 
 input {
@@ -84,48 +92,68 @@ fieldset {
 
   border: var(--form-border) solid;
 }
+
+.plate {
+  padding: calc(var(--form-gap) * 2);
+  background-color: var(--pink-200);
+  background-image:
+    radial-gradient(circle at center,
+      transparent 39%,
+      var(--plate) 40%,
+      var(--plate) 50%,
+      transparent 1%),
+    linear-gradient(90deg, var(--plate) var(--form-border), transparent 1%),
+    linear-gradient(270deg, var(--plate) var(--form-border), transparent 1%),
+    linear-gradient(-180deg, var(--plate) var(--form-border), transparent 1%),
+    linear-gradient(360deg, var(--plate) var(--form-border), transparent 1%);
+
+  box-shadow: 0.05rem 0.05rem 0 0rem, 0.1rem 0.1rem 0 0rem;
+}
 </style>
 
 <template>
-  <form>
-    <fieldset>
-      <div class="row block block-bg_separator"></div>
-      <div class="row block block-bg_separator">
-        <section class="header">
-          <h2>Sign Up</h2>
-          <p>Have an account?</p>
-        </section>
-      </div>
 
-      <div>
+  <div class="plate block block-bg_separator">
+    <form>
+      <fieldset>
         <div class="row block block-bg_separator"></div>
         <div class="row block block-bg_separator">
-          <section class="input-wrapper">
-            <input id="username" placeholder="username" type="text" required />
-          </section>
-        </div>
-        <div class="row block block-bg_separator"></div>
-
-        <div class="row block block-bg_separator">
-          <section class="input-wrapper">
-            <input id="email" placeholder="email" type="email" required />
-          </section>
-        </div>
-        <div class="row block block-bg_separator"></div>
-
-        <div class="row block block-bg_separator">
-          <section class="input-wrapper">
-            <input id="password" placeholder="password" type="password" required />
+          <section class="header">
+            <h2>Sign Up</h2>
+            <p>Have an account?</p>
           </section>
         </div>
 
-        <div class="row block block-bg_separator"></div>
+        <div>
+          <div class="row block block-bg_separator"></div>
+          <div class="row block block-bg_separator">
+            <section class="input-wrapper">
+              <input id="username" placeholder="username" type="text" required />
+            </section>
+          </div>
+          <div class="row block block-bg_separator"></div>
 
-        <div class="row block block-bg_separator">
-          <button id="submit-btn">submit</button>
+          <div class="row block block-bg_separator">
+            <section class="input-wrapper">
+              <input id="email" placeholder="email" type="email" required />
+            </section>
+          </div>
+          <div class="row block block-bg_separator"></div>
+
+          <div class="row block block-bg_separator">
+            <section class="input-wrapper">
+              <input id="password" placeholder="password" type="password" required />
+            </section>
+          </div>
+
+          <div class="row block block-bg_separator"></div>
+
+          <div class="row block block-bg_separator">
+            <button id="submit-btn">submit</button>
+          </div>
+          <div class="row block block-bg_separator"></div>
         </div>
-        <div class="row block block-bg_separator"></div>
-      </div>
-    </fieldset>
-  </form>
+      </fieldset>
+    </form>
+  </div>
 </template>
